@@ -21,6 +21,7 @@ function doResult(urlToFetch, type) {
             else {
                 let result = "<img class=\"result-image\" src=\"" + val + "\"/>";
                 result = result + "<form class=\"reset-form\"><input id=\"resetSubmit\" type=\"submit\" value=\"Clear\"></input></form>"
+                result = result + "<script>document.getElementById(\"resetSubmit\").addEventListener(\"click\", function(event) { document.getElementById(\"img-result\").innerHTML = \"\"; })</script>"
                 document.getElementById("img-result").innerHTML = result;
             }
     });
@@ -30,9 +31,9 @@ function doResult(urlToFetch, type) {
 document.getElementById("dogSubmit").addEventListener("click", function(event) {
     event.preventDefault();
     doResult(dogEndpoint, "dog");
-})
+});
 
 document.getElementById("foxSubmit").addEventListener("click", function(event) {
     event.preventDefault();
     doResult(foxEndpoint, "fox");
-})
+});
