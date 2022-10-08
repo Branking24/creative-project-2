@@ -26,15 +26,13 @@ function doResult(urlToFetch, type) {
     });
 }
 
-document.getElementById("codeSubmit").addEventListener("click", function(event) {
+
+document.getElementById("dogSubmit").addEventListener("click", function(event) {
     event.preventDefault();
-    let foxButton = document.getElementById("fox");
-    let dogButton = document.getElementById("dog");
-    if (foxButton.checked) {
-        doResult(foxEndpoint, "fox");
-    }
-    else if (dogButton.checked) {
-        doResult(dogEndpoint, "dog");
-    }
-    
-});
+    doResult(dogEndpoint, "dog");
+})
+
+document.getElementById("foxSubmit").addEventListener("click", function(event) {
+    event.preventDefault();
+    doResult(foxEndpoint, "fox");
+})
