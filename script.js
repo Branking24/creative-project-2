@@ -20,7 +20,7 @@ function doResult(urlToFetch, type) {
             }
             else {
                 let result = "<img class=\"result-image\" src=\"" + val + "\"/>";
-                result = result + "<form><input id=\"resetSubmit\" type=\"submit\" value=\"Reset\"></input></form>"
+                result = result + "<form class=\"reset-form\"><input id=\"resetSubmit\" type=\"submit\" value=\"Clear\"></input></form>"
                 document.getElementById("img-result").innerHTML = result;
             }
     });
